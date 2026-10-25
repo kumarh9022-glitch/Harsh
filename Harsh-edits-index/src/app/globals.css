@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth overflow-x-hidden;
+  }
+  
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 51 95% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 43 74% 49%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 51 95% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 43 74% 29%;
+    --input: 0 0% 15%;
+    --ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.03), transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+    animation: pulse 15s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl md:text-4xl font-bold font-headline text-center mb-12 md:mb-16 relative capitalize;
+  }
+  .section-title::after {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 -bottom-4 w-24 h-1 bg-primary rounded-full origin-center transition-transform duration-700 ease-out;
+    transform: scaleX(0);
+  }
+
+  .is-visible .section-title::after {
+    transform: scaleX(1);
+  }
+
+  .liquid-btn {
+    @apply relative inline-flex items-center justify-center overflow-hidden transition-all duration-300;
+  }
+  .liquid-btn span {
+    @apply relative z-10;
+  }
+  .liquid-btn::before {
+    content: '';
+    @apply absolute -left-1/4 -top-1/4 h-[150%] w-[150%] scale-0 rounded-full bg-primary/80 transition-transform duration-700 ease-in-out;
+  }
+  .liquid-btn:hover::before {
+    @apply scale-100;
+  }
+  .liquid-btn.glow-on-hover:hover {
+     @apply shadow-[0_0_25px_0px_hsl(var(--primary)/0.6)];
+  }
+
+  .golden-frame {
+    @apply p-1.5 bg-gradient-to-br from-primary via-accent to-primary rounded-xl shadow-lg;
+    background-size: 300% 300%;
+    animation: gradient-animation 4s ease infinite;
+  }
+
+  .glass-card {
+    @apply bg-card/50 backdrop-blur-lg border border-primary/20 rounded-xl transition-all duration-300;
+  }
+  .glass-card:hover {
+    @apply border-primary/50 shadow-2xl shadow-primary/10 transform scale-[1.02];
+  }
+}

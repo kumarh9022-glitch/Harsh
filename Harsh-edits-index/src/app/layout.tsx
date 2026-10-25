@@ -1,0 +1,35 @@
+import type { Metadata } from 'next';
+import './globals.css';
+import { Toaster } from '@/components/ui/toaster';
+import { LoadingScreen } from '@/components/loading-screen';
+
+export const metadata: Metadata = {
+  title: 'Harsh – Professional Video Editor',
+  description: 'Creative Video Editor with 3+ years of experience in editing, motion graphics, and visual storytelling. Passionate about creating engaging content while meeting tight deadlines and client expectations',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className="dark">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="font-body antialiased">
+        <LoadingScreen />
+        <div id="main-content" className="opacity-0 transition-opacity duration-1000">
+          {children}
+        </div>
+        <Toaster />
+      </body>
+    </html>
+  );
+}
