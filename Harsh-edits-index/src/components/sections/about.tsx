@@ -161,13 +161,30 @@ export function AboutSection({ onHireMeClick }: AboutSectionProps) {
                                 <div className="flex flex-col items-start gap-1 mb-2">
                                     <div className="flex items-center justify-between w-full">
                                         <h4 className="text-lg font-bold text-primary tracking-tight">HypeSquadz</h4>
-                                        <span className="text-[10px] text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - Present</span>
+                                        <span className="text-[10px] text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - 2026</span>
                                     </div>
                                     <p className="text-xs font-medium text-white/90">Senior Video Editor</p>
                                 </div>
                                 <ul className="list-disc list-inside text-xs text-muted-foreground/90 space-y-1.5 ml-1">
                                     <li>Instagram Reels, YouTube Shorts & Music Video Editing with smooth transitions, beat sync & cinematic effects</li>
                                     <li>Explainer Videos & Green Screen Editing with clean visuals, motion graphics & professional storytelling</li>
+                                </ul>
+                            </div>
+
+                            <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent w-full" />
+
+                            {/* Physics Wallah */}
+                            <div>
+                                <div className="flex flex-col items-start gap-1 mb-2">
+                                    <div className="flex items-center justify-between w-full">
+                                        <h4 className="text-lg font-bold text-primary tracking-tight">Physics Wallah</h4>
+                                        <span className="text-[10px] text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - Present</span>
+                                    </div>
+                                    <p className="text-xs font-medium text-white/90">Associate Video Editor</p>
+                                </div>
+                                <ul className="list-disc list-inside text-xs text-muted-foreground/90 space-y-1.5 ml-1">
+                                    <li>YouTube Video Editing with engaging storytelling, smooth cuts, sound design & audience retention techniques</li>
+                                    <li>Instagram Reels, YouTube Shorts & Music Video Editing with smooth transitions, beat sync & cinematic effects</li>
                                 </ul>
                             </div>
                         </div>
@@ -240,13 +257,30 @@ export function AboutSection({ onHireMeClick }: AboutSectionProps) {
                                 <div className="flex flex-col items-start gap-1 mb-2">
                                     <div className="flex items-center justify-between w-full">
                                         <h4 className="text-xl font-bold text-primary tracking-tight">HypeSquadz</h4>
-                                        <span className="text-xs text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - Present</span>
+                                        <span className="text-xs text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - 2026</span>
                                     </div>
                                     <p className="text-sm font-medium text-white/90">Senior Video Editor</p>
                                 </div>
                                 <ul className="list-disc list-inside text-sm text-muted-foreground/90 space-y-2 ml-1">
                                     <li>Instagram Reels, YouTube Shorts & Music Video Editing with smooth transitions, beat sync & cinematic effects</li>
                                     <li>Explainer Videos & Green Screen Editing with clean visuals, motion graphics & professional storytelling</li>
+                                </ul>
+                            </div>
+
+                            <div className="h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent w-full" />
+
+                            {/* Physics Wallah */}
+                            <div>
+                                <div className="flex flex-col items-start gap-1 mb-2">
+                                    <div className="flex items-center justify-between w-full">
+                                        <h4 className="text-xl font-bold text-primary tracking-tight">Physics Wallah</h4>
+                                        <span className="text-xs text-muted-foreground/80 font-mono border border-white/10 px-2 py-0.5 rounded-full bg-white/5">2026 - Present</span>
+                                    </div>
+                                    <p className="text-sm font-medium text-white/90">Associate Video Editor</p>
+                                </div>
+                                <ul className="list-disc list-inside text-sm text-muted-foreground/90 space-y-2 ml-1">
+                                    <li>YouTube Video Editing with engaging storytelling, smooth cuts, sound design & audience retention techniques</li>
+                                    <li>Instagram Reels, YouTube Shorts & Music Video Editing with smooth transitions, beat sync & cinematic effects</li>
                                 </ul>
                             </div>
                         </div>
